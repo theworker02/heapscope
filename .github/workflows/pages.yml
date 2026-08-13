@@ -25,15 +25,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Prepare site assets
         run: |
           mkdir -p site/assets
           cp -f assets/logo.svg assets/wordmark.svg site/assets/ 2>/dev/null || true
           cp -f assets/heapscope-logo.png site/assets/ 2>/dev/null || true
+<<<<<<< HEAD
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
+=======
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v5
+>>>>>>> origin/main
         with:
           path: site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
