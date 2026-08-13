@@ -7,6 +7,7 @@ module HeapScope
     TAGLINE = "Ruby retention & heap growth diagnostics"
     GITHUB_USER = "theworker02"
     GITHUB_REPO = "https://github.com/theworker02/heapscope"
+    RUBYGEMS_URL = "https://rubygems.org/gems/heapscope"
     PAGES_URL = "https://theworker02.github.io/heapscope/"
     SPONSORS_URL = "https://github.com/sponsors/theworker02"
     THANKS_DEV_URL = "https://thanks.dev/u/gh/theworker02"
@@ -45,10 +46,12 @@ module HeapScope
       lines = []
       lines << compact_banner
       lines << ""
+      lines << "RubyGems:   #{RUBYGEMS_URL}"
       lines << "Repository: #{GITHUB_REPO}"
       lines << "Website:    #{PAGES_URL}"
       funding_lines.each { |l| lines << l }
       lines << ""
+      lines << "Install: gem install heapscope"
       lines << "Privacy: local-only diagnostics — no telemetry, no object-value dumps by default."
       lines.join("\n")
     end
@@ -85,6 +88,7 @@ module HeapScope
         version: VERSION,
         github_user: GITHUB_USER,
         github_repo: GITHUB_REPO,
+        rubygems_url: RUBYGEMS_URL,
         pages_url: PAGES_URL,
         sponsors_url: SPONSORS_URL,
         thanks_dev_url: THANKS_DEV_URL,

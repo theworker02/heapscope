@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HeapScope — Ruby retention &amp; heap growth diagnostics</title>
-  <meta name="description" content="Local, evidence-driven Ruby memory diagnostics. Find what is retained, where it came from, and whether growth looks intentional or suspicious.">
+  <meta name="description" content="Local, evidence-driven Ruby memory diagnostics. Find what is retained, where it came from, and whether growth looks intentional or suspicious. Available on RubyGems.">
   <meta name="theme-color" content="#0f766e">
   <meta property="og:title" content="HeapScope">
-  <meta property="og:description" content="Ruby object retention, heap growth, and memory leak diagnostics — local-only, no SaaS.">
+  <meta property="og:description" content="Ruby object retention, heap growth, and memory leak diagnostics — local-only, no SaaS. Available on RubyGems.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theworker02.github.io/heapscope/">
   <meta property="og:image" content="assets/og-card.svg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +28,7 @@
       <a href="#features">Features</a>
       <a href="#install">Install</a>
       <a href="#docs">Docs</a>
+      <a href="https://rubygems.org/gems/heapscope">RubyGems</a>
       <a href="https://github.com/theworker02/heapscope">GitHub</a>
       <a class="cta-nav" href="https://thanks.dev/u/gh/theworker02">Sponsor</a>
     </nav>
@@ -35,16 +37,23 @@
   <main>
     <section class="hero">
       <img class="hero-mark" src="assets/wordmark.svg" alt="HeapScope" width="280">
-      <p class="eyebrow">Ruby · MRI 3.1+ · Local-only</p>
+      <p class="eyebrow">Ruby · MRI 3.1+ · Local-only · No SaaS</p>
       <h1>When memory grows,<br>know <em>why</em>.</h1>
       <p class="lede">
-        HeapScope is an evidence-driven toolkit for object retention, heap growth,
-        and leak-shaped patterns in long-running Ruby processes — without claiming
+        Evidence-driven diagnostics for object retention, heap growth, and
+        leak-shaped patterns in long-running Ruby processes — without claiming
         a leak unless the evidence is strong.
       </p>
+      <p class="gem-callout">
+        <a href="https://rubygems.org/gems/heapscope">
+          <img alt="Gem version" src="https://img.shields.io/gem/v/heapscope?style=plastic&amp;color=0f766e&amp;label=gem">
+        </a>
+        <span>Available on <a href="https://rubygems.org/gems/heapscope">RubyGems</a> · <code>gem install heapscope</code></span>
+      </p>
       <div class="actions">
-        <a class="btn primary" href="#install">Get started</a>
-        <a class="btn ghost" href="https://github.com/theworker02/heapscope">View on GitHub</a>
+        <a class="btn primary" href="https://rubygems.org/gems/heapscope">Get the gem</a>
+        <a class="btn ghost" href="#install">Install &amp; run</a>
+        <a class="btn ghost" href="https://github.com/theworker02/heapscope">GitHub</a>
         <a class="btn ghost" href="https://thanks.dev/u/gh/theworker02">Sponsor</a>
       </div>
       <pre class="terminal" aria-label="Quick start"><code>gem install heapscope
@@ -84,43 +93,59 @@ heapscope doctor</code></pre>
     </section>
 
     <section id="install" class="install">
-      <h2>Install</h2>
-      <pre><code># Gemfile
-gem "heapscope", "~&gt; 0.6"
+      <h2>Install from RubyGems</h2>
+      <p class="section-lede">
+        Get the release on
+        <a href="https://rubygems.org/gems/heapscope">rubygems.org/gems/heapscope</a>.
+        Source and release notes live on
+        <a href="https://github.com/theworker02/heapscope/releases">GitHub Releases</a>.
+      </p>
+      <pre><code># Install
+gem install heapscope
 
-# or
-gem install heapscope</code></pre>
+# Or Gemfile
+gem "heapscope", "~&gt; 0.6"</code></pre>
       <pre><code>require "heapscope"
 
 HeapScope.probe(title: "import") do
   ImportJob.perform_now
 end</code></pre>
+      <div class="actions">
+        <a class="btn primary" href="https://rubygems.org/gems/heapscope">Open on RubyGems</a>
+        <a class="btn ghost" href="https://github.com/theworker02/heapscope/blob/main/docs/cli.md">CLI reference</a>
+      </div>
     </section>
 
     <section id="docs" class="docs">
       <h2>Documentation</h2>
       <ul>
+        <li><a href="https://rubygems.org/gems/heapscope">RubyGems · heapscope</a></li>
         <li><a href="https://github.com/theworker02/heapscope/blob/main/README.md">README &amp; quick start</a></li>
         <li><a href="https://github.com/theworker02/heapscope/blob/main/docs/index.md">Docs hub</a></li>
         <li><a href="https://github.com/theworker02/heapscope/blob/main/docs/cli.md">CLI reference</a></li>
         <li><a href="https://github.com/theworker02/heapscope/blob/main/docs/diagnostics">Diagnostic codes</a></li>
         <li><a href="https://github.com/theworker02/heapscope/blob/main/CHANGELOG.md">Changelog</a></li>
+        <li><a href="https://github.com/theworker02/heapscope/releases/tag/v0.6.0">Release notes (v0.6.0)</a></li>
       </ul>
     </section>
 
     <section class="sponsor">
       <h2>Support HeapScope</h2>
-      <p>Fund ongoing maintenance via GitHub Sponsors or thanks.dev.</p>
+      <p>Independent software — fund ongoing maintenance via GitHub Sponsors or thanks.dev.</p>
       <div class="actions">
         <a class="btn primary" href="https://github.com/sponsors/theworker02">GitHub Sponsors</a>
-        <a class="btn ghost" href="https://thanks.dev/u/gh/theworker02">thanks.dev</a>
+        <a class="btn ghost" href="https://thanks.dev/u/gh/theworker02">thanks.dev/u/gh/theworker02</a>
       </div>
     </section>
   </main>
 
   <footer>
     <img src="assets/wordmark.svg" alt="HeapScope" width="200">
-    <p>MIT License · Maintained by <a href="https://github.com/theworker02">@theworker02</a></p>
+    <p>
+      MIT License · Maintained by <a href="https://github.com/theworker02">@theworker02</a>
+      · <a href="https://rubygems.org/gems/heapscope">RubyGems</a>
+      · <a href="https://github.com/theworker02/heapscope">GitHub</a>
+    </p>
     <p class="fine">No SaaS. No uploads. Retention-first diagnostics for Ruby.</p>
   </footer>
 </body>

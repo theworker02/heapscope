@@ -8,7 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://rubygems.org/gems/heapscope"><img alt="Gem 0.6.0" src="https://img.shields.io/badge/gem-0.6.0-0f766e?style=plastic"></a>
+  <a href="https://rubygems.org/gems/heapscope"><img alt="Gem version" src="https://img.shields.io/gem/v/heapscope?style=plastic&color=0f766e&label=gem"></a>
+  <a href="https://rubygems.org/gems/heapscope"><img alt="RubyGems" src="https://img.shields.io/badge/RubyGems-heapscope-CC342D?style=plastic&logo=ruby&logoColor=white"></a>
   <a href="https://github.com/theworker02/heapscope/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/theworker02/heapscope/ci.yml?branch=main&style=plastic&label=CI"></a>
   <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-334155?style=plastic"></a>
   <a href="#ruby-compatibility"><img alt="Ruby" src="https://img.shields.io/badge/ruby-%3E%3D%203.1-CC342D?style=plastic&logo=ruby&logoColor=white"></a>
@@ -16,10 +17,11 @@
   <a href="#no-saas"><img alt="No SaaS" src="https://img.shields.io/badge/SaaS-none-64748b?style=plastic"></a>
   <a href="https://thanks.dev/u/gh/theworker02"><img alt="thanks.dev" src="https://img.shields.io/badge/thanks.dev-theworker02-0f766e?style=plastic"></a>
   <a href="https://theworker02.github.io/heapscope/"><img alt="Docs" src="https://img.shields.io/badge/docs-Pages-0f766e?style=plastic"></a>
-  <a href="CHANGELOG.md"><img alt="Changelog" src="https://img.shields.io/badge/changelog-0.6.0-0f766e?style=plastic"></a>
+  <a href="CHANGELOG.md"><img alt="Changelog" src="https://img.shields.io/badge/changelog-keep%20a%20changelog-0f766e?style=plastic"></a>
 </p>
 
 <p align="center">
+  <a href="https://rubygems.org/gems/heapscope"><strong>RubyGems</strong></a> ·
   <a href="https://theworker02.github.io/heapscope/">Website</a> ·
   <a href="docs/index.md">Docs hub</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -27,8 +29,8 @@
   <a href="#privacy">Privacy</a> ·
   <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a> ·
   <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a> ·
-  <a href="https://github.com/theworker02/heapscope/releases/tag/v0.6.0">Release v0.6.0</a> ·
-  <a href="CHANGELOG.md">Changelog</a>
+  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="https://github.com/theworker02/heapscope/releases/tag/v0.6.0">Release notes</a>
 </p>
 
 ---
@@ -46,12 +48,12 @@ allocation pressure from retention, and intentional caches from suspicious growt
 
 | | |
 |--|--|
+| **Install (gem)** | [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) · `gem install heapscope` |
 | **Site / docs** | [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) |
 | **Source** | [github.com/theworker02/heapscope](https://github.com/theworker02/heapscope) |
-| **Latest release** | [v0.6.0](https://github.com/theworker02/heapscope/releases/tag/v0.6.0) · [`CHANGELOG`](CHANGELOG.md) |
+| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) · [narrative 0.6.0](docs/changelogs/0.6.0.md) |
+| **Release notes** | [GitHub v0.6.0](https://github.com/theworker02/heapscope/releases/tag/v0.6.0) |
 | **Sponsor** | [GitHub Sponsors](https://github.com/sponsors/theworker02) · [thanks.dev](https://thanks.dev/u/gh/theworker02) |
-
-Release notes: [`docs/changelogs/0.6.0.md`](docs/changelogs/0.6.0.md)
 
 ---
 
@@ -68,7 +70,13 @@ Every finding separates **observed facts**, **derived behavior**, **hypothesis**
 
 ## Installation
 
-Add the gem (MRI Ruby ≥ 3.1 recommended):
+Install from [RubyGems](https://rubygems.org/gems/heapscope) (MRI Ruby ≥ 3.1 recommended):
+
+```bash
+gem install heapscope
+```
+
+Or add to your Gemfile:
 
 ```ruby
 # Gemfile
@@ -77,11 +85,16 @@ gem "heapscope", "~> 0.6"
 
 ```bash
 bundle add heapscope
-# or, once published to RubyGems:
-gem install heapscope
 ```
 
-From source (this repo):
+Confirm the install:
+
+```bash
+heapscope about
+heapscope doctor
+```
+
+From source (development / contributing):
 
 ```bash
 git clone https://github.com/theworker02/heapscope.git
@@ -90,12 +103,7 @@ bundle install
 bundle exec rake test
 ```
 
-Confirm the install:
-
-```bash
-bundle exec heapscope about
-bundle exec heapscope doctor
-```
+Release notes and source tags: [GitHub Releases](https://github.com/theworker02/heapscope/releases) · narrative: [`docs/changelogs/0.6.0.md`](docs/changelogs/0.6.0.md)
 
 ---
 

@@ -4,13 +4,14 @@
 
 # Documentation hub
 
-**Website:** [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) · **Sponsor:** [thanks.dev/u/gh/theworker02](https://thanks.dev/u/gh/theworker02)
+**Website:** [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) · **RubyGems:** [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) · **Sponsor:** [thanks.dev/u/gh/theworker02](https://thanks.dev/u/gh/theworker02)
 
 ## Start here
 
 | Doc | Purpose |
 |-----|---------|
 | [README](../README.md) | Product overview & quick start |
+| [RubyGems](https://rubygems.org/gems/heapscope) | Install the published gem (`gem install heapscope`) |
 | [First retention experiment](guides/first-retention-experiment.md) | Hands-on workflow |
 | [CI budgets](guides/ci-budgets.md) | Regression gates + presets |
 | [Production-safe sampling](guides/production-safe.md) | Low-overhead prod use |
@@ -31,7 +32,7 @@
 
 ## Version
 
-Docs track **HeapScope 0.6.x**.
+Docs track **HeapScope 0.6.x**. Install from [RubyGems](https://rubygems.org/gems/heapscope).
 
 <p align="center">
   <img src="../assets/logo.svg" alt="" width="48"/>

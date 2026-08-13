@@ -75,6 +75,7 @@ module HeapScope
         lines << "  3 runtime capability unavailable"
         lines << ""
         lines << "Privacy: no network, no telemetry, no object value serialization by default."
+        lines << "Gem:     #{Branding::RUBYGEMS_URL}"
         lines << "Sponsor: #{Branding::THANKS_DEV_URL}"
         lines << "Docs:    #{Branding::PAGES_URL}"
         lines << ""

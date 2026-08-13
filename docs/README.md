@@ -13,7 +13,8 @@ Start at [`index.md`](index.md).
 - [Roadmap](ROADMAP.md)
 - [Changelogs](changelogs/)
 
-Website: [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) · Sponsor: [thanks.dev/u/gh/theworker02](https://thanks.dev/u/gh/theworker02)
+Website: [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) · Gem: [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) · Sponsor: [thanks.dev/u/gh/theworker02](https://thanks.dev/u/gh/theworker02)
+
 
 <p align="center">
   <img src="../assets/logo.svg" alt="" width="48"/>

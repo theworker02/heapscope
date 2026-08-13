@@ -91,7 +91,8 @@ heapscope pack report.json -o ./pack
 heapscope explain HS001
 ```
 
-Sponsor: https://thanks.dev/u/gh/theworker02 · Site: https://theworker02.github.io/heapscope/
+Sponsor: https://thanks.dev/u/gh/theworker02 · Site: https://theworker02.github.io/heapscope/ · Gem: https://rubygems.org/gems/heapscope
+
 
 <p align="center">
   <img src="../assets/logo.svg" alt="" width="48"/>

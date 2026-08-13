@@ -32,8 +32,9 @@ Gem::Specification.new do |spec|
     HeapScope #{HeapScope::VERSION} installed.
       heapscope doctor
       heapscope about
-      https://theworker02.github.io/heapscope/
-      https://thanks.dev/u/gh/theworker02
+      gem:     https://rubygems.org/gems/heapscope
+      docs:    https://theworker02.github.io/heapscope/
+      sponsor: https://thanks.dev/u/gh/theworker02
 
     Local-only diagnostics. No telemetry. No object-value dumps by default.
   MSG
