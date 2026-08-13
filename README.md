@@ -8,15 +8,15 @@
 </p>
 
 <p align="center">
-  <a href="https://rubygems.org/gems/heapscope"><img alt="Gem version" src="https://img.shields.io/gem/v/heapscope?color=0f766e&style=for-the-badge"></a>
-  <a href="https://github.com/theworker02/heapscope/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/theworker02/heapscope/ci.yml?branch=main&style=for-the-badge&label=CI"></a>
-  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-334155?style=for-the-badge"></a>
-  <a href="#ruby-compatibility"><img alt="Ruby" src="https://img.shields.io/badge/ruby-%3E%3D%203.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white"></a>
-  <a href="#privacy"><img alt="Privacy" src="https://img.shields.io/badge/privacy-local%20only-0f766e&style=for-the-badge"></a>
-  <a href="#no-saas"><img alt="No SaaS" src="https://img.shields.io/badge/SaaS-none-64748b&style=for-the-badge"></a>
-  <a href="https://thanks.dev/u/gh/theworker02"><img alt="thanks.dev" src="https://img.shields.io/badge/thanks.dev-theworker02-0f766e&style=for-the-badge"></a>
-  <a href="https://theworker02.github.io/heapscope/"><img alt="Docs" src="https://img.shields.io/badge/docs-Pages-0f766e?style=for-the-badge"></a>
-  <a href="CHANGELOG.md"><img alt="Changelog" src="https://img.shields.io/badge/changelog-0.6.0-0f766e&style=for-the-badge"></a>
+  <a href="https://rubygems.org/gems/heapscope"><img alt="Gem 0.6.0" src="https://img.shields.io/badge/gem-0.6.0-0f766e?style=plastic"></a>
+  <a href="https://github.com/theworker02/heapscope/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/theworker02/heapscope/ci.yml?branch=main&style=plastic&label=CI"></a>
+  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-334155?style=plastic"></a>
+  <a href="#ruby-compatibility"><img alt="Ruby" src="https://img.shields.io/badge/ruby-%3E%3D%203.1-CC342D?style=plastic&logo=ruby&logoColor=white"></a>
+  <a href="#privacy"><img alt="Privacy" src="https://img.shields.io/badge/privacy-local%20only-0f766e?style=plastic"></a>
+  <a href="#no-saas"><img alt="No SaaS" src="https://img.shields.io/badge/SaaS-none-64748b?style=plastic"></a>
+  <a href="https://thanks.dev/u/gh/theworker02"><img alt="thanks.dev" src="https://img.shields.io/badge/thanks.dev-theworker02-0f766e?style=plastic"></a>
+  <a href="https://theworker02.github.io/heapscope/"><img alt="Docs" src="https://img.shields.io/badge/docs-Pages-0f766e?style=plastic"></a>
+  <a href="CHANGELOG.md"><img alt="Changelog" src="https://img.shields.io/badge/changelog-0.6.0-0f766e?style=plastic"></a>
 </p>
 
 <p align="center">
@@ -25,7 +25,9 @@
   <a href="#quick-start">Quick start</a> ·
   <a href="docs/cli.md">CLI</a> ·
   <a href="#privacy">Privacy</a> ·
-  <a href="https://thanks.dev/u/gh/theworker02">Sponsor</a> ·
+  <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a> ·
+  <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a> ·
+  <a href="https://github.com/theworker02/heapscope/releases/tag/v0.6.0">Release v0.6.0</a> ·
   <a href="CHANGELOG.md">Changelog</a>
 </p>
 
@@ -41,6 +43,13 @@ It is designed for Rails, Puma, Sidekiq, background jobs, CLIs, and CI — disti
 allocation pressure from retention, and intentional caches from suspicious growth.
 
 > **No SaaS.** No uploads. No telemetry. Everything runs in-process on your machine.
+
+| | |
+|--|--|
+| **Site / docs** | [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) |
+| **Source** | [github.com/theworker02/heapscope](https://github.com/theworker02/heapscope) |
+| **Latest release** | [v0.6.0](https://github.com/theworker02/heapscope/releases/tag/v0.6.0) · [`CHANGELOG`](CHANGELOG.md) |
+| **Sponsor** | [GitHub Sponsors](https://github.com/sponsors/theworker02) · [thanks.dev](https://thanks.dev/u/gh/theworker02) |
 
 Release notes: [`docs/changelogs/0.6.0.md`](docs/changelogs/0.6.0.md)
 
@@ -59,6 +68,8 @@ Every finding separates **observed facts**, **derived behavior**, **hypothesis**
 
 ## Installation
 
+Add the gem (MRI Ruby ≥ 3.1 recommended):
+
 ```ruby
 # Gemfile
 gem "heapscope", "~> 0.6"
@@ -66,8 +77,24 @@ gem "heapscope", "~> 0.6"
 
 ```bash
 bundle add heapscope
-# or
+# or, once published to RubyGems:
 gem install heapscope
+```
+
+From source (this repo):
+
+```bash
+git clone https://github.com/theworker02/heapscope.git
+cd heapscope
+bundle install
+bundle exec rake test
+```
+
+Confirm the install:
+
+```bash
+bundle exec heapscope about
+bundle exec heapscope doctor
 ```
 
 ---
