@@ -1,0 +1,119 @@
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - "vendor/**/*"
+    - "examples/**/*"
+    - "benchmark/**/*"
+    - "*.gemspec"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 100
+  Exclude:
+    - "lib/heapscope/report/html.rb"
+    - "lib/heapscope/report/text.rb"
+
+Metrics/ClassLength:
+  Max: 400
+
+Metrics/ModuleLength:
+  Max: 400
+
+Metrics/AbcSize:
+  Max: 250
+  Exclude:
+    - "lib/heapscope/report/text.rb"
+
+Metrics/CyclomaticComplexity:
+  Max: 45
+  Exclude:
+    - "lib/heapscope/report/text.rb"
+
+Metrics/PerceivedComplexity:
+  Max: 45
+  Exclude:
+    - "lib/heapscope/report/text.rb"
+
+Metrics/ParameterLists:
+  Max: 15
+
+Metrics/BlockLength:
+  Max: 40
+  Exclude:
+    - "heapscope.gemspec"
+    - "test/**/*"
+    - "Rakefile"
+
+Metrics/BlockNesting:
+  Max: 4
+
+Layout/LineLength:
+  Max: 180
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/EmptyStringInsideInterpolation:
+  Enabled: false
+
+Lint/ShadowedException:
+  Enabled: false
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: false
+
+Layout/EmptyLinesAfterModuleInclusion:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/DuplicateBranch:
+  Enabled: false
+
+Lint/UselessConstantScoping:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/MultipleComparison:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/SafeNavigationChainLength:
+  Enabled: false
+
+Naming/PredicateMethod:
+  Enabled: false
+
+Lint/AmbiguousOperatorPrecedence:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  AllowUnusedKeywordArguments: true
+  IgnoreEmptyMethods: true
+
+Style/OptionalBooleanParameter:
+  Enabled: false

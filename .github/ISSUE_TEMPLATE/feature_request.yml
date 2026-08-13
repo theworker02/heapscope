@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest a HeapScope enhancement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What retention/diagnosis pain does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Related milestone area
+      options:
+        - Core snapshots / diffs
+        - Detectors / findings
+        - Reachability / graphs
+        - Integrations (Rails/Sidekiq/tests)
+        - CLI / reports
+        - Docs / DX
+        - Other

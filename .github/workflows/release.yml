@@ -1,0 +1,48 @@
+# Push heapscope to RubyGems.org via Trusted Publishing (OIDC).
+#
+# Required once on RubyGems.org (pending publisher for a new gem):
+#   https://rubygems.org/profile/oidc/pending_trusted_publishers
+#   Gem name: heapscope
+#   GitHub owner: theworker02
+#   Repository: heapscope
+#   Workflow filename: release.yml
+#   Environment: release
+#
+# Docs: https://guides.rubygems.org/trusted-publishing/
+
+name: Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  push_gem:
+    name: Push gem to RubyGems.org
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ruby
+          bundler-cache: true
+
+      - name: Configure RubyGems Credentials
+        uses: rubygems/configure-rubygems-credentials@v2.1.0
+
+      - name: Build gem
+        run: gem build heapscope.gemspec
+
+      - name: Push gem
+        run: gem push heapscope-*.gem

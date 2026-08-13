@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative "../lib/heapscope"
+require_relative "../lib/heapscope/cli"
+
+exit HeapScope::CLI.run(ARGV)

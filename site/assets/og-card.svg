@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="HeapScope">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="55%" stop-color="#115e59"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="180" fill="#99f6e4" opacity="0.12"/>
+  <circle cx="160" cy="520" r="220" fill="#ccfbf1" opacity="0.1"/>
+  <g transform="translate(120,190)">
+    <rect width="160" height="160" rx="36" fill="#042f2e" opacity="0.35"/>
+    <rect x="28" y="96" width="28" height="28" rx="4" fill="#5eead4"/>
+    <rect x="64" y="80" width="28" height="44" rx="4" fill="#99f6e4"/>
+    <rect x="100" y="64" width="28" height="60" rx="4" fill="#ccfbf1"/>
+    <circle cx="108" cy="52" r="30" fill="none" stroke="#ecfdf5" stroke-width="10"/>
+    <line x1="130" y1="74" x2="150" y2="94" stroke="#ecfdf5" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="320" y="300" font-family="IBM Plex Sans, Segoe UI, Helvetica, Arial, sans-serif" font-size="92" font-weight="700" fill="#f8fafc" letter-spacing="-2">HeapScope</text>
+  <text x="324" y="360" font-family="IBM Plex Sans, Segoe UI, Helvetica, Arial, sans-serif" font-size="34" fill="#99f6e4">Ruby retention &amp; heap growth diagnostics</text>
+  <text x="324" y="420" font-family="IBM Plex Sans, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#cbd5e1">Local-only · Evidence-first · No SaaS</text>
+</svg>

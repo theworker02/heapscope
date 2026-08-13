@@ -1,0 +1,12 @@
+heapscope:
+  mode: standard
+  track_allocations: false
+  max_graph_depth: 6
+  max_objects: 100000
+  object_sample_rate: 1.0
+  ignore_patterns:
+    - "^Zeitwerk"
+    - "^Bootsnap"
+    - "^HeapScope::"
+  retention:
+    min_cycles: 3

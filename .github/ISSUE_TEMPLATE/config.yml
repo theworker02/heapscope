@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/theworker02/heapscope/security/advisories/new
+    about: Please report vulnerabilities privately.
+  - name: Discussions / questions
+    url: https://github.com/theworker02/heapscope/discussions
+    about: Ask usage questions without filing a bug.
+  - name: Sponsor via thanks.dev
+    url: https://thanks.dev/u/gh/theworker02
+    about: Fund ongoing maintenance (path matches GitHub username).

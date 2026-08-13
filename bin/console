@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "heapscope"
+require "irb"
+
+puts "HeapScope #{HeapScope::VERSION} console"
+puts "Try: HeapScope.probe(title: 'demo') { 1000.times.map { Object.new } }"
+IRB.start(__FILE__)

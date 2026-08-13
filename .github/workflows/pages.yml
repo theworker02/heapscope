@@ -1,0 +1,39 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "site/**"
+      - ".github/workflows/pages.yml"
+      - "assets/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare site assets
+        run: |
+          mkdir -p site/assets
+          cp -f assets/logo.svg assets/wordmark.svg site/assets/ 2>/dev/null || true
+          cp -f assets/heapscope-logo.png site/assets/ 2>/dev/null || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

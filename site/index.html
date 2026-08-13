@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HeapScope — Ruby retention &amp; heap growth diagnostics</title>
+  <meta name="description" content="Local, evidence-driven Ruby memory diagnostics. Find what is retained, where it came from, and whether growth looks intentional or suspicious.">
+  <meta name="theme-color" content="#0f766e">
+  <meta property="og:title" content="HeapScope">
+  <meta property="og:description" content="Ruby object retention, heap growth, and memory leak diagnostics — local-only, no SaaS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-card.svg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="./">
+      <img src="assets/logo.svg" alt="" width="36" height="36">
+      <span>HeapScope</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="#docs">Docs</a>
+      <a href="https://github.com/theworker02/heapscope">GitHub</a>
+      <a class="cta-nav" href="https://thanks.dev/u/gh/theworker02">Sponsor</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-mark" src="assets/wordmark.svg" alt="HeapScope" width="280">
+      <p class="eyebrow">Ruby · MRI 3.1+ · Local-only</p>
+      <h1>When memory grows,<br>know <em>why</em>.</h1>
+      <p class="lede">
+        HeapScope is an evidence-driven toolkit for object retention, heap growth,
+        and leak-shaped patterns in long-running Ruby processes — without claiming
+        a leak unless the evidence is strong.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#install">Get started</a>
+        <a class="btn ghost" href="https://github.com/theworker02/heapscope">View on GitHub</a>
+        <a class="btn ghost" href="https://thanks.dev/u/gh/theworker02">Sponsor</a>
+      </div>
+      <pre class="terminal" aria-label="Quick start"><code>gem install heapscope
+heapscope about
+heapscope doctor</code></pre>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Built for retention, not just RSS</h2>
+      <p class="section-lede">Snapshots, multi-cycle experiments, allocation sites, thread-locals, and CI budgets — all offline.</p>
+      <div class="grid">
+        <article>
+          <h3>Retention experiments</h3>
+          <p>Force-GC cycles, survival ratios, and growth patterns that separate churn from sticky populations.</p>
+        </article>
+        <article>
+          <h3>Evidence-first findings</h3>
+          <p>HS001–HS010 diagnostics separate facts, derived behavior, hypotheses, and suspected causes.</p>
+        </article>
+        <article>
+          <h3>Rails &amp; Sidekiq ready</h3>
+          <p>Optional middleware and matchers without pulling frameworks into the core gem.</p>
+        </article>
+        <article>
+          <h3>Privacy by design</h3>
+          <p>No network, no telemetry, no object-value dumps by default. Reports stay on your machine.</p>
+        </article>
+        <article>
+          <h3>Budgets &amp; next steps</h3>
+          <p>CI presets (<code>rails_request</code>, <code>sidekiq_job</code>, <code>ci_strict</code>) plus ranked follow-ups on every report.</p>
+        </article>
+        <article>
+          <h3>Watch alerts</h3>
+          <p><code>heapscope watch</code> samples RSS and live slots and flags spike anomalies — still fully local.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="install" class="install">
+      <h2>Install</h2>
+      <pre><code># Gemfile
+gem "heapscope", "~&gt; 0.6"
+
+# or
+gem install heapscope</code></pre>
+      <pre><code>require "heapscope"
+
+HeapScope.probe(title: "import") do
+  ImportJob.perform_now
+end</code></pre>
+    </section>
+
+    <section id="docs" class="docs">
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="https://github.com/theworker02/heapscope/blob/main/README.md">README &amp; quick start</a></li>
+        <li><a href="https://github.com/theworker02/heapscope/blob/main/docs/index.md">Docs hub</a></li>
+        <li><a href="https://github.com/theworker02/heapscope/blob/main/docs/cli.md">CLI reference</a></li>
+        <li><a href="https://github.com/theworker02/heapscope/blob/main/docs/diagnostics">Diagnostic codes</a></li>
+        <li><a href="https://github.com/theworker02/heapscope/blob/main/CHANGELOG.md">Changelog</a></li>
+      </ul>
+    </section>
+
+    <section class="sponsor">
+      <h2>Support HeapScope</h2>
+      <p>Fund ongoing maintenance via GitHub Sponsors or thanks.dev.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/sponsors/theworker02">GitHub Sponsors</a>
+        <a class="btn ghost" href="https://thanks.dev/u/gh/theworker02">thanks.dev</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/wordmark.svg" alt="HeapScope" width="200">
+    <p>MIT License · Maintained by <a href="https://github.com/theworker02">@theworker02</a></p>
+    <p class="fine">No SaaS. No uploads. Retention-first diagnostics for Ruby.</p>
+  </footer>
+</body>
+</html>
