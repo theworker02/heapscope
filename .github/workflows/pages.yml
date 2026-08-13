@@ -31,13 +31,8 @@ jobs:
           mkdir -p site/assets
           cp -f assets/logo.svg assets/wordmark.svg site/assets/ 2>/dev/null || true
           cp -f assets/heapscope-logo.png site/assets/ 2>/dev/null || true
-<<<<<<< HEAD
       - uses: actions/configure-pages@v6
-      - uses: actions/upload-pages-artifact@v3
-=======
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v5
->>>>>>> origin/main
         with:
           path: site
       - id: deployment
