@@ -47,6 +47,7 @@ module HeapScope
       "probe" => :cmd_probe,
       "measure" => :cmd_measure,
       "retention" => :cmd_retention,
+      "flamegraph" => :cmd_flamegraph,
       "findings" => :cmd_findings,
       "scorecard" => :cmd_scorecard,
       "table" => :cmd_table,

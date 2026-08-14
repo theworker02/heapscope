@@ -30,7 +30,7 @@
   <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a> ·
   <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a> ·
   <a href="CHANGELOG.md">Changelog</a> ·
-  <a href="https://github.com/theworker02/heapscope/releases/tag/v0.6.0">Release notes</a>
+  <a href="https://github.com/theworker02/heapscope/releases/tag/v0.7.0">Release notes</a>
 </p>
 
 ---
@@ -51,8 +51,8 @@ allocation pressure from retention, and intentional caches from suspicious growt
 | **Install (gem)** | [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) · `gem install heapscope` |
 | **Site / docs** | [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) |
 | **Source** | [github.com/theworker02/heapscope](https://github.com/theworker02/heapscope) |
-| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) · [narrative 0.6.0](docs/changelogs/0.6.0.md) |
-| **Release notes** | [GitHub v0.6.0](https://github.com/theworker02/heapscope/releases/tag/v0.6.0) |
+| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) · [narrative 0.7.0](docs/changelogs/0.7.0.md) |
+| **Release notes** | [GitHub v0.7.0](https://github.com/theworker02/heapscope/releases/tag/v0.7.0) |
 | **Sponsor** | [GitHub Sponsors](https://github.com/sponsors/theworker02) · [thanks.dev](https://thanks.dev/u/gh/theworker02) |
 
 ---
@@ -80,7 +80,7 @@ Or add to your Gemfile:
 
 ```ruby
 # Gemfile
-gem "heapscope", "~> 0.6"
+gem "heapscope", "~> 0.7"
 ```
 
 ```bash
@@ -103,7 +103,7 @@ bundle install
 bundle exec rake test
 ```
 
-Release notes and source tags: [GitHub Releases](https://github.com/theworker02/heapscope/releases) · narrative: [`docs/changelogs/0.6.0.md`](docs/changelogs/0.6.0.md)
+Release notes and source tags: [GitHub Releases](https://github.com/theworker02/heapscope/releases) · narrative: [`docs/changelogs/0.7.0.md`](docs/changelogs/0.7.0.md)
 
 ---
 
@@ -223,7 +223,10 @@ report = monitor.stop
 
 ```bash
 heapscope watch --interval 10 --duration 600 -o monitor.json
+heapscope flamegraph snapshot.json --format speedscope -o alloc.json
 ```
+
+`heapscope flamegraph` turns captured allocation sites into folded stacks (inferno / flamegraph.pl) or Speedscope JSON. Capture with `--track-allocations` (or `mode: :deep`) so sites are present.
 
 Alerts fire on RSS / live-slot spikes between samples (thresholds configurable).
 

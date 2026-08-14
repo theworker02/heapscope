@@ -35,6 +35,7 @@ require_relative "heapscope/branding"
 require_relative "heapscope/suggest"
 require_relative "heapscope/catalog"
 require_relative "heapscope/pack"
+require_relative "heapscope/flamegraph"
 
 # HeapScope — Ruby object retention, heap growth, and memory leak diagnostics.
 #
@@ -280,6 +281,10 @@ module HeapScope
 
     def write_config!(path = "heapscope.yml", force: false)
       ConfigLoader.write_starter!(path, force: force)
+    end
+
+    def flamegraph(snapshot, unit: :count)
+      Flamegraph.from_snapshot(snapshot, unit: unit)
     end
 
     private

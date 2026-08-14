@@ -24,6 +24,7 @@ module HeapScope
         "probe" => "Measure a Ruby file/snippet and print a scorecard",
         "measure" => "CLI wrapper around HeapScope.measure",
         "retention" => "CLI wrapper around HeapScope.retention_test",
+        "flamegraph" => "Export allocation sites as folded stacks or Speedscope JSON",
         "findings" => "List/filter findings from a report",
         "scorecard" => "Print scorecard only from a report",
         "table" => "Print growth table from a report",
@@ -164,6 +165,13 @@ module HeapScope
             --mode MODE --force-gc / --no-force-gc
             -o, --output PATH --html PATH --json
             --fail-on-high / --fail-on-medium
+        U
+        "flamegraph" => <<~U,
+          Usage: heapscope flamegraph SNAPSHOT.json [options]
+            --format FMT             folded (default) or speedscope
+            --unit UNIT              count (default) or bytes
+            -o, --output PATH        Write the flamegraph instead of stdout
+            --json                   Print frame table JSON
         U
         "findings" => <<~U,
           Usage: heapscope findings REPORT.json [options]

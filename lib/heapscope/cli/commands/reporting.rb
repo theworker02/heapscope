@@ -222,6 +222,38 @@ module HeapScope
           say "OK  schema_version=#{data[:schema_version]} heapscope=#{data[:heapscope_version]}"
           EXIT_OK
         end
+
+        def cmd_flamegraph(argv)
+          return help_exit("flamegraph") if command_wants_help?(argv)
+
+          options = { format: "folded", unit: "count", output: nil }
+          OptionParser.new do |opts|
+            opts.banner = "Usage: heapscope flamegraph SNAPSHOT.json [options]"
+            opts.on("--format FMT", %w[folded speedscope]) { |f| options[:format] = f }
+            opts.on("--unit UNIT", %w[count bytes]) { |u| options[:unit] = u }
+            opts.on("-o", "--output PATH") { |p| options[:output] = p }
+            opts.on("--json") { options[:json] = true }
+            opts.on("-h", "--help") { options[:help] = true }
+          end.parse!(argv)
+          return help_exit("flamegraph") if options[:help]
+
+          path = argv.shift or raise ArgumentError, "flamegraph requires SNAPSHOT.json"
+          snapshot = Snapshot.load(path)
+          graph = HeapScope.flamegraph(snapshot, unit: options[:unit].to_sym)
+          content =
+            if json_mode? || options[:json]
+              JSON.pretty_generate(graph.to_h)
+            else
+              graph.render(format: options[:format].to_sym)
+            end
+          if options[:output]
+            File.write(options[:output], content)
+            say "Wrote #{options[:output]}"
+          else
+            puts content
+          end
+          EXIT_OK
+        end
       end
     end
   end
