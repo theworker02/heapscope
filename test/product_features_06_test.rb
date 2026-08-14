@@ -8,7 +8,7 @@ class ProductFeatures06Test < Minitest::Test
   end
 
   def test_current_product_version
-    assert_equal "0.6.0", HeapScope::VERSION
+    assert_equal "0.7.0", HeapScope::VERSION
   end
 
   def test_budget_presets
@@ -118,6 +118,6 @@ class ProductFeatures06Test < Minitest::Test
   def test_scorecard_module_file
     assert defined?(HeapScope::Scorecard)
     assert defined?(HeapScope::Probe)
-    assert_equal "0.6.0", HeapScope::Branding.to_h[:version]
+    assert_equal "0.7.0", HeapScope::Branding.to_h[:version]
   end
 end

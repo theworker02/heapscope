@@ -14,6 +14,7 @@ report packs, and a modular CLI — all local-only.
 | 0.4 | Sessions, scorecards, schema, GitHub polish |
 | 0.5 | Funding, Pages site, pack/suggest, CLI expansion |
 | **0.6** | Product consolidation — presets, ranking, watch, slim JSON, doctor --fix |
+| **0.7** | Allocation flamegraphs (folded stacks + Speedscope) |
 
 ## Next
 

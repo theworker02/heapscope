@@ -9,6 +9,14 @@ Detailed release write-ups live in [`docs/changelogs/`](docs/changelogs/).
 
 ## [Unreleased]
 
+## [0.7.0] — 2026-08-14
+
+### Added
+
+- Allocation flamegraphs from snapshot sites (`HeapScope.flamegraph`, `heapscope flamegraph`)
+- Folded-stack output for inferno / flamegraph.pl and Speedscope JSON (`--format folded|speedscope`)
+- Optional `--unit count|bytes` weighting for allocation counts vs shallow bytes
+
 ## [0.6.0] — 2026-08-13
 
 ### Added
@@ -77,7 +85,8 @@ Branding, detectors, richer HTML, eval harness, security/CoC.
 
 Initial retention toolkit.
 
-[Unreleased]: https://github.com/theworker02/heapscope/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/theworker02/heapscope/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/theworker02/heapscope/releases/tag/v0.7.0
 [0.6.0]: https://github.com/theworker02/heapscope/releases/tag/v0.6.0
 [0.5.0]: https://github.com/theworker02/heapscope/releases/tag/v0.5.0
 [0.4.0]: https://github.com/theworker02/heapscope/releases/tag/v0.4.0
