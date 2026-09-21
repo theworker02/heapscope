@@ -1,17 +1,17 @@
-<p align="center">
+﻿<p align="center">
   <img src="assets/wordmark.svg" alt="HeapScope" width="520"/>
 </p>
 
 <p align="center">
   <strong>Ruby object retention, heap growth, and memory leak diagnostics</strong><br/>
-  <em>Not just “how much memory” — <strong>why</strong> the process is keeping it.</em>
+  <em>Not just â€œhow much memoryâ€ â€” <strong>why</strong> the process is keeping it.</em>
 </p>
 
 <p align="center">
   <a href="https://rubygems.org/gems/heapscope"><img alt="Gem version" src="https://img.shields.io/gem/v/heapscope?style=plastic&color=0f766e&label=gem"></a>
   <a href="https://rubygems.org/gems/heapscope"><img alt="RubyGems" src="https://img.shields.io/badge/RubyGems-heapscope-CC342D?style=plastic&logo=ruby&logoColor=white"></a>
   <a href="https://github.com/theworker02/heapscope/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/theworker02/heapscope/ci.yml?branch=main&style=plastic&label=CI"></a>
-  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-334155?style=plastic"></a>
+  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-Proprietary%20(source--available)-334155?style=plastic"></a>
   <a href="#ruby-compatibility"><img alt="Ruby" src="https://img.shields.io/badge/ruby-%3E%3D%203.1-CC342D?style=plastic&logo=ruby&logoColor=white"></a>
   <a href="#privacy"><img alt="Privacy" src="https://img.shields.io/badge/privacy-local%20only-0f766e?style=plastic"></a>
   <a href="#no-saas"><img alt="No SaaS" src="https://img.shields.io/badge/SaaS-none-64748b?style=plastic"></a>
@@ -21,15 +21,15 @@
 </p>
 
 <p align="center">
-  <a href="https://rubygems.org/gems/heapscope"><strong>RubyGems</strong></a> ·
-  <a href="https://theworker02.github.io/heapscope/">Website</a> ·
-  <a href="docs/index.md">Docs hub</a> ·
-  <a href="#quick-start">Quick start</a> ·
-  <a href="docs/cli.md">CLI</a> ·
-  <a href="#privacy">Privacy</a> ·
-  <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a> ·
-  <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a> ·
-  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="https://rubygems.org/gems/heapscope"><strong>RubyGems</strong></a> Â·
+  <a href="https://theworker02.github.io/heapscope/">Website</a> Â·
+  <a href="docs/index.md">Docs hub</a> Â·
+  <a href="#quick-start">Quick start</a> Â·
+  <a href="docs/cli.md">CLI</a> Â·
+  <a href="#privacy">Privacy</a> Â·
+  <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a> Â·
+  <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a> Â·
+  <a href="CHANGELOG.md">Changelog</a> Â·
   <a href="https://github.com/theworker02/heapscope/releases/tag/v0.7.0">Release notes</a>
 </p>
 
@@ -41,36 +41,36 @@
 **abnormal heap growth**, **allocation hot spots**, **long-lived objects**, and
 **leak-shaped patterns** in long-running processes.
 
-It is designed for Rails, Puma, Sidekiq, background jobs, CLIs, and CI — distinguishing
+It is designed for Rails, Puma, Sidekiq, background jobs, CLIs, and CI â€” distinguishing
 allocation pressure from retention, and intentional caches from suspicious growth.
 
 > **No SaaS.** No uploads. No telemetry. Everything runs in-process on your machine.
 
 | | |
 |--|--|
-| **Install (gem)** | [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) · `gem install heapscope` |
+| **Install (gem)** | [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) Â· `gem install heapscope` |
 | **Site / docs** | [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) |
 | **Source** | [github.com/theworker02/heapscope](https://github.com/theworker02/heapscope) |
-| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) · [narrative 0.7.0](docs/changelogs/0.7.0.md) |
+| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) Â· [narrative 0.7.0](docs/changelogs/0.7.0.md) |
 | **Release notes** | [GitHub v0.7.0](https://github.com/theworker02/heapscope/releases/tag/v0.7.0) |
-| **Sponsor** | [GitHub Sponsors](https://github.com/sponsors/theworker02) · [thanks.dev](https://thanks.dev/u/gh/theworker02) |
+| **Sponsor** | [GitHub Sponsors](https://github.com/sponsors/theworker02) Â· [thanks.dev](https://thanks.dev/u/gh/theworker02) |
 
 ---
 
 ## Why HeapScope
 
-Traditional tools often answer: *“How much memory is the process using?”*
+Traditional tools often answer: *â€œHow much memory is the process using?â€*
 
-HeapScope answers: *“Why is this Ruby process retaining more memory than expected?”*
+HeapScope answers: *â€œWhy is this Ruby process retaining more memory than expected?â€*
 
 Every finding separates **observed facts**, **derived behavior**, **hypothesis**, and
-**suspected cause** — and never claims `"Memory leak confirmed"` without strong evidence.
+**suspected cause** â€” and never claims `"Memory leak confirmed"` without strong evidence.
 
 ---
 
 ## Installation
 
-Install from [RubyGems](https://rubygems.org/gems/heapscope) (MRI Ruby ≥ 3.1 recommended):
+Install from [RubyGems](https://rubygems.org/gems/heapscope) (MRI Ruby â‰¥ 3.1 recommended):
 
 ```bash
 gem install heapscope
@@ -103,7 +103,7 @@ bundle install
 bundle exec rake test
 ```
 
-Release notes and source tags: [GitHub Releases](https://github.com/theworker02/heapscope/releases) · narrative: [`docs/changelogs/0.7.0.md`](docs/changelogs/0.7.0.md)
+Release notes and source tags: [GitHub Releases](https://github.com/theworker02/heapscope/releases) Â· narrative: [`docs/changelogs/0.7.0.md`](docs/changelogs/0.7.0.md)
 
 ---
 
@@ -111,7 +111,7 @@ Release notes and source tags: [GitHub Releases](https://github.com/theworker02/
 
 | Engine | Status |
 |--------|--------|
-| **MRI Ruby ≥ 3.1** | Primary target — full ObjectSpace / allocation tracing / memsize |
+| **MRI Ruby â‰¥ 3.1** | Primary target â€” full ObjectSpace / allocation tracing / memsize |
 | JRuby | Adapter present; capabilities degrade safely |
 | TruffleRuby | Adapter present; capabilities degrade safely |
 
@@ -174,13 +174,13 @@ Full CLI: [docs/cli.md](docs/cli.md)
 ### Ruby heap vs RSS
 
 HeapScope records **both** Ruby heap populations and process RSS.
-**RSS growth ≠ Ruby object leak** — native extensions, allocators, mmap, and CoW matter.
+**RSS growth â‰  Ruby object leak** â€” native extensions, allocators, mmap, and CoW matter.
 
 ### Allocated vs retained
 
 ```text
-100,000 allocated + 99,500 freed  → churn
-100,000 allocated + 20,000 live   → retention
+100,000 allocated + 99,500 freed  â†’ churn
+100,000 allocated + 20,000 live   â†’ retention
 ```
 
 ### Forced GC
@@ -278,7 +278,7 @@ Branding / funding URLs live in `HeapScope::Branding` (single source of truth).
 
 ## Reports
 
-Text, Markdown, versioned JSON, and static HTML — all offline. HTML uses the same brand mark as the site and README. Reports include **NEXT STEPS** when findings warrant follow-up.
+Text, Markdown, versioned JSON, and static HTML â€” all offline. HTML uses the same brand mark as the site and README. Reports include **NEXT STEPS** when findings warrant follow-up.
 
 ```ruby
 HeapScope.pack(report, "./pack")
@@ -349,7 +349,7 @@ lib/heapscope/cli/               Modular CLI commands
 
 ## Roadmap
 
-See [`docs/ROADMAP.md`](docs/ROADMAP.md). Current focus: deeper precision and optional CI marketplace packaging — not parallel product surfaces.
+See [`docs/ROADMAP.md`](docs/ROADMAP.md). Current focus: deeper precision and optional CI marketplace packaging â€” not parallel product surfaces.
 
 ---
 
@@ -368,13 +368,5 @@ gem build heapscope.gemspec
 
 ## License
 
-MIT © [@theworker02](https://github.com/theworker02) — see [`LICENSE`](LICENSE).
+**Source-available proprietary** — evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md) and [NOTICE](./NOTICE).
 
-Sponsor: [GitHub Sponsors](https://github.com/sponsors/theworker02) · [thanks.dev/u/gh/theworker02](https://thanks.dev/u/gh/theworker02)
-
----
-
-<p align="center">
-  <img src="assets/logo.svg" alt="" width="72"/><br/>
-  <sub>When <code>top</code> says memory is growing but profiling won’t say why — reach for HeapScope.</sub>
-</p>
