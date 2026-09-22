@@ -4,7 +4,7 @@
 
 <p align="center">
   <strong>Ruby object retention, heap growth, and memory leak diagnostics</strong><br/>
-  <em>Not just â€œhow much memoryâ€ â€” <strong>why</strong> the process is keeping it.</em>
+  <em>Not just Ã¢â‚¬Å“how much memoryÃ¢â‚¬Â Ã¢â‚¬â€ <strong>why</strong> the process is keeping it.</em>
 </p>
 
 <p align="center">
@@ -21,15 +21,15 @@
 </p>
 
 <p align="center">
-  <a href="https://rubygems.org/gems/heapscope"><strong>RubyGems</strong></a> Â·
-  <a href="https://theworker02.github.io/heapscope/">Website</a> Â·
-  <a href="docs/index.md">Docs hub</a> Â·
-  <a href="#quick-start">Quick start</a> Â·
-  <a href="docs/cli.md">CLI</a> Â·
-  <a href="#privacy">Privacy</a> Â·
-  <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a> Â·
-  <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a> Â·
-  <a href="CHANGELOG.md">Changelog</a> Â·
+  <a href="https://rubygems.org/gems/heapscope"><strong>RubyGems</strong></a> Ã‚Â·
+  <a href="https://theworker02.github.io/heapscope/">Website</a> Ã‚Â·
+  <a href="docs/index.md">Docs hub</a> Ã‚Â·
+  <a href="#quick-start">Quick start</a> Ã‚Â·
+  <a href="docs/cli.md">CLI</a> Ã‚Â·
+  <a href="#privacy">Privacy</a> Ã‚Â·
+  <a href="https://github.com/sponsors/theworker02">GitHub Sponsors</a> Ã‚Â·
+  <a href="https://thanks.dev/u/gh/theworker02">thanks.dev</a> Ã‚Â·
+  <a href="CHANGELOG.md">Changelog</a> Ã‚Â·
   <a href="https://github.com/theworker02/heapscope/releases/tag/v0.7.0">Release notes</a>
 </p>
 
@@ -41,36 +41,36 @@
 **abnormal heap growth**, **allocation hot spots**, **long-lived objects**, and
 **leak-shaped patterns** in long-running processes.
 
-It is designed for Rails, Puma, Sidekiq, background jobs, CLIs, and CI â€” distinguishing
+It is designed for Rails, Puma, Sidekiq, background jobs, CLIs, and CI Ã¢â‚¬â€ distinguishing
 allocation pressure from retention, and intentional caches from suspicious growth.
 
 > **No SaaS.** No uploads. No telemetry. Everything runs in-process on your machine.
 
 | | |
 |--|--|
-| **Install (gem)** | [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) Â· `gem install heapscope` |
+| **Install (gem)** | [rubygems.org/gems/heapscope](https://rubygems.org/gems/heapscope) Ã‚Â· `gem install heapscope` |
 | **Site / docs** | [theworker02.github.io/heapscope](https://theworker02.github.io/heapscope/) |
 | **Source** | [github.com/theworker02/heapscope](https://github.com/theworker02/heapscope) |
-| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) Â· [narrative 0.7.0](docs/changelogs/0.7.0.md) |
+| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) Ã‚Â· [narrative 0.7.0](docs/changelogs/0.7.0.md) |
 | **Release notes** | [GitHub v0.7.0](https://github.com/theworker02/heapscope/releases/tag/v0.7.0) |
-| **Sponsor** | [GitHub Sponsors](https://github.com/sponsors/theworker02) Â· [thanks.dev](https://thanks.dev/u/gh/theworker02) |
+| **Sponsor** | [GitHub Sponsors](https://github.com/sponsors/theworker02) Ã‚Â· [thanks.dev](https://thanks.dev/u/gh/theworker02) |
 
 ---
 
 ## Why HeapScope
 
-Traditional tools often answer: *â€œHow much memory is the process using?â€*
+Traditional tools often answer: *Ã¢â‚¬Å“How much memory is the process using?Ã¢â‚¬Â*
 
-HeapScope answers: *â€œWhy is this Ruby process retaining more memory than expected?â€*
+HeapScope answers: *Ã¢â‚¬Å“Why is this Ruby process retaining more memory than expected?Ã¢â‚¬Â*
 
 Every finding separates **observed facts**, **derived behavior**, **hypothesis**, and
-**suspected cause** â€” and never claims `"Memory leak confirmed"` without strong evidence.
+**suspected cause** Ã¢â‚¬â€ and never claims `"Memory leak confirmed"` without strong evidence.
 
 ---
 
 ## Installation
 
-Install from [RubyGems](https://rubygems.org/gems/heapscope) (MRI Ruby â‰¥ 3.1 recommended):
+Install from [RubyGems](https://rubygems.org/gems/heapscope) (MRI Ruby Ã¢â€°Â¥ 3.1 recommended):
 
 ```bash
 gem install heapscope
@@ -103,7 +103,7 @@ bundle install
 bundle exec rake test
 ```
 
-Release notes and source tags: [GitHub Releases](https://github.com/theworker02/heapscope/releases) Â· narrative: [`docs/changelogs/0.7.0.md`](docs/changelogs/0.7.0.md)
+Release notes and source tags: [GitHub Releases](https://github.com/theworker02/heapscope/releases) Ã‚Â· narrative: [`docs/changelogs/0.7.0.md`](docs/changelogs/0.7.0.md)
 
 ---
 
@@ -111,7 +111,7 @@ Release notes and source tags: [GitHub Releases](https://github.com/theworker02/
 
 | Engine | Status |
 |--------|--------|
-| **MRI Ruby â‰¥ 3.1** | Primary target â€” full ObjectSpace / allocation tracing / memsize |
+| **MRI Ruby Ã¢â€°Â¥ 3.1** | Primary target Ã¢â‚¬â€ full ObjectSpace / allocation tracing / memsize |
 | JRuby | Adapter present; capabilities degrade safely |
 | TruffleRuby | Adapter present; capabilities degrade safely |
 
@@ -174,13 +174,13 @@ Full CLI: [docs/cli.md](docs/cli.md)
 ### Ruby heap vs RSS
 
 HeapScope records **both** Ruby heap populations and process RSS.
-**RSS growth â‰  Ruby object leak** â€” native extensions, allocators, mmap, and CoW matter.
+**RSS growth Ã¢â€°Â  Ruby object leak** Ã¢â‚¬â€ native extensions, allocators, mmap, and CoW matter.
 
 ### Allocated vs retained
 
 ```text
-100,000 allocated + 99,500 freed  â†’ churn
-100,000 allocated + 20,000 live   â†’ retention
+100,000 allocated + 99,500 freed  Ã¢â€ â€™ churn
+100,000 allocated + 20,000 live   Ã¢â€ â€™ retention
 ```
 
 ### Forced GC
@@ -278,7 +278,7 @@ Branding / funding URLs live in `HeapScope::Branding` (single source of truth).
 
 ## Reports
 
-Text, Markdown, versioned JSON, and static HTML â€” all offline. HTML uses the same brand mark as the site and README. Reports include **NEXT STEPS** when findings warrant follow-up.
+Text, Markdown, versioned JSON, and static HTML Ã¢â‚¬â€ all offline. HTML uses the same brand mark as the site and README. Reports include **NEXT STEPS** when findings warrant follow-up.
 
 ```ruby
 HeapScope.pack(report, "./pack")
@@ -349,7 +349,7 @@ lib/heapscope/cli/               Modular CLI commands
 
 ## Roadmap
 
-See [`docs/ROADMAP.md`](docs/ROADMAP.md). Current focus: deeper precision and optional CI marketplace packaging â€” not parallel product surfaces.
+See [`docs/ROADMAP.md`](docs/ROADMAP.md). Current focus: deeper precision and optional CI marketplace packaging Ã¢â‚¬â€ not parallel product surfaces.
 
 ---
 
@@ -368,7 +368,7 @@ gem build heapscope.gemspec
 
 ## License
 
-**Source-available proprietary** — evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md) and [NOTICE](./NOTICE).
+**Source-available proprietary** â€” evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md) and [NOTICE](./NOTICE).
 
 
 ---
@@ -376,3 +376,7 @@ gem build heapscope.gemspec
 ## License & acquisition
 
 This project is **proprietary**. Production use, redistribution, and commercial deployment require a written commercial license or completed acquisition. See [LICENSE](./LICENSE) and [ACQUISITION.md](./ACQUISITION.md). Contact [@theworker02](https://github.com/theworker02).
+
+## Acquisition diligence
+
+Buyer-facing diligence materials live in [docs/acquisition/](./docs/acquisition/). Commercial licensing contact path: [COMMERCIAL.md](./COMMERCIAL.md).
