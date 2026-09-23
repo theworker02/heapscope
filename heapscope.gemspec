@@ -13,10 +13,10 @@ Gem::Specification.new do |spec|
     HeapScope is a local, evidence-driven memory diagnostics toolkit for Ruby.
     It helps identify object retention, abnormal heap growth, allocation hot spots,
     long-lived objects, GC-surviving populations, and likely memory leaks in
-    long-running Ruby processes — without claiming a leak unless evidence is strong.
+    long-running Ruby processes â€” without claiming a leak unless evidence is strong.
   DESC
   spec.homepage = "https://github.com/theworker02/heapscope"
-  spec.license = "MIT"
+  spec.license = "Proprietary"
   spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
